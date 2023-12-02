@@ -15,7 +15,7 @@ namespace Excuse_me
     {
         private const string modGUID = "Hexnet.lethalcompany.excuseme";
         private const string modName = "Excuse me!";
-        private const string modVersion = "1.0.0";
+        private const string modVersion = "1.0.1";
 
         private readonly Harmony harmony = new Harmony(modGUID);
 
@@ -50,7 +50,7 @@ namespace Excuse_me.Patches
 
                 GameObject TriggerObject = UnityEngine.GameObject.Find("BellDinger/Trigger");
 
-                if (TriggerObject)
+                if (TriggerObject != null)
                 {
                     BellTrigger = TriggerObject.GetComponent<InteractTrigger>();
                 }
